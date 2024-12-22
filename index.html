@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Pathfinding Visualization (BFS, DFS, UCS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>City Pathfinding Visualization</h1>
+    </header>
+    <main>
+        <div id="graph-container">
+            <canvas id="graphCanvas" width="800" height="600"></canvas>
+        </div>
+        <div id="controls">
+            <h2>Graph Editor</h2>
+            <form id="addEdgeForm">
+                <label for="fromNode">From City:</label>
+                <input type="text" id="fromNode" required>
+                <label for="toNode">To City:</label>
+                <input type="text" id="toNode" required>
+                <label for="cost">Cost:</label>
+                <input type="number" id="cost" min="1" required>
+                <button type="submit">Add Path</button>
+            </form>
+            <button id="bfsButton">Start BFS</button>
+            <button id="dfsButton">Start DFS</button>
+            <button id="ucsButton">Start UCS</button>
+            <button id="resetButton">Reset Graph</button>
+        </div>
+        <div id="output">
+            <h2>Path and Cost</h2>
+            <p id="resultPath"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
